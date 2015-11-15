@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+def version = System.env.BUILD_NUMBER ?: 1
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -8,7 +10,7 @@ android {
         applicationId "com.example.pivotal.sample_android_app"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
+        versionCode version as Integer
         versionName "1.0"
     }
     buildTypes {
@@ -28,6 +30,8 @@ dependencies {
 import org.ajoberstar.grgit.*
 
 task pullRebase << {
-    def grgit = Grgit.open(dir: rootProject.projectDir)
-    grgit.pull(rebase: true)
+//    def grgit = Grgit.open(dir: rootProject.projectDir)
+//    grgit.pull(rebase: true)
+
+    print version
 }
