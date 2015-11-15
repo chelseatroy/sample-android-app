@@ -1,1 +1,4 @@
 language: android
+
+ components:
+    - build-tools-23.0.1
