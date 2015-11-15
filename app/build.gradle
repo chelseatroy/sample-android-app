@@ -28,6 +28,6 @@ dependencies {
 import org.ajoberstar.grgit.*
 
 task pullRebase << {
-    def grgit = Grgit.open(dir: rootProject)
+    def grgit = Grgit.open(dir: rootProject.projectDir)
     grgit.pull(rebase: true)
 }
