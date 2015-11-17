@@ -14,11 +14,6 @@ buildscript {
     }
 }
 
-apply plugin: 'de.felixschulze.gradle.hockeyapp'
-hockeyapp {
-    apiToken = "67038f8cfee9414b8b51ea22f48bdce7"
-}
-
 allprojects {
     repositories {
         jcenter()

@@ -27,6 +27,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
 }
+
+
+apply plugin: 'de.felixschulze.gradle.hockeyapp'
+hockeyapp {
+    apiToken = "67038f8cfee9414b8b51ea22f48bdce7"
+}
 import org.ajoberstar.grgit.*
 
 task pullRebase << {
